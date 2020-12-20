@@ -1,7 +1,10 @@
 /* eslint-disable no-restricted-syntax */
 import { walk } from "https://deno.land/std@0.80.0/fs/mod.ts";
 import { component, html, options, ssr } from "./types.ts";
+
 import Parser from "./parser.ts";
+import Component from "./component.ts";
+import SiblingList from "./sibling.ts";
 
 function Renderer(this: ssr) {
   this.root = null;
@@ -52,6 +55,9 @@ Renderer.prototype.config = async function (options: options) {
     return console.error("Error inside of Renderer.config", { error });
   }
 };
+/**
+* refactor to implement 
+*/
 
 Renderer.prototype.walk = async function (entry: string, id: string) {
   for await (const file of walk(`${entry}`, { exts: ["vue"] })) {

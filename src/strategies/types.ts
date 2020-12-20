@@ -5,6 +5,7 @@
  * parseTools: for vno methods and parsing data
  * traverse: for iteration function
  */
+
 export interface component {
   label: string;
   path: string | URL;
@@ -18,13 +19,13 @@ export interface component {
   style?: string;
   instance?: any;
 }
-interface add {
-  (descendent: component): void;
-}
+// interface add {
+//   (descendent: component): void;
+// }
 export interface sibling {
   head: component | null;
   tail: component | null;
-  add: add;
+  add(): void;
 }
 
 interface filePath {

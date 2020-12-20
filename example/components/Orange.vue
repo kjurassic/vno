@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import LilOrange from './components/LilOrange';
+import LilOrange from './LilOrange';
 
 export default {
   name: 'orange',
