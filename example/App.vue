@@ -65,7 +65,6 @@ export default {
   components: {
     Home,
     Deno,
-
     Travel,
     Lighthouse,
     VueJs,
